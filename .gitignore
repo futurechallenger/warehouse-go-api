@@ -1,0 +1,40 @@
+# ===== Go 构建产物 =====
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.prof
+coverage.txt
+coverage.html
+
+# 二进制输出目录（air 热重载构建输出，见 .air.toml）
+/tmp/
+/bin/
+/dist/
+
+# ===== Go 工作区 =====
+go.work
+go.work.sum
+
+# 注：ent/ 生成代码按 entgo 官方建议随仓库提交，不忽略
+
+# ===== 环境变量 / 本地敏感配置 =====
+.env
+.env.*
+!.env.example
+
+# ===== 编辑器 / IDE / 系统 =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== 日志 =====
+*.log
+logs/

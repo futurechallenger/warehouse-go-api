@@ -1,0 +1,15 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# 关键：指定 cmd/main.go 作为入口
+cmd = "go build -o ./tmp/main ./cmd/main.go"
+bin = "./tmp/main"
+delay = 1000
+# 显式监听 cmd/ 目录，解决 main.go 改了不触发热重载的问题
+include_dir = ["./", "cmd", "internal"]
+include_ext = ["go", "tpl", "tmpl", "html"]
+exclude_dir = ["tmp", "vendor", "assets", ".git"]
+
+[log]
+time = false
